@@ -1,0 +1,977 @@
+:root {
+    --text-color: #666;
+    --title-color: #000;
+    --link-color: #1e90ff;
+    --background-color: #F4F5F7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    line-height: 1.6;
+    font-family: "Rubik", sans-serif;
+}
+
+article {
+    margin-top: 65px;
+}
+
+.contant_container {
+    max-width: 43.875rem;
+    margin: 0 auto;
+}
+
+.intro {
+    margin-bottom: 64px;
+}
+
+.article__title_container{
+     width: 100%;
+     text-align: center;
+     background-color: rgba(116, 182, 255, 0.15);
+}
+
+.article__title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--title-color);
+    padding: 64px 208px;
+}
+
+.article__img_container{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.article__img_1{
+     margin-bottom: 1.5rem;
+     margin-top: 48px;
+}
+
+.article__img_2{
+     margin-bottom: 64px;
+     margin-top: 40px;
+}
+
+.article__img {
+     width: 1024px;
+     max-width: none;
+     margin: 0 auto;
+}
+
+.article__text {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.article__text span{
+     color: #000;
+     font-weight: 600;
+}
+
+.article__subtitle {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--title-color);
+    margin-bottom: 24px;
+}
+
+.contents {
+    margin-bottom: 64px;
+}
+
+.contents__list {
+     margin-left: 1.5rem;
+}
+
+.contents__item {
+    margin-bottom: 8px;
+}
+
+.contents__link {
+    font-size: 18px;
+    font-weight: 400;
+    color: #2F353D;
+    text-decoration: none;
+}
+
+.section {
+    margin-bottom: 3rem;
+}
+
+.section div{
+     margin-bottom: 64px;
+}
+
+.article__text a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.article__text a:hover {
+    text-decoration: underline;
+}
+
+/* Блок реакций */
+.reactions {
+    margin-top: 3rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.reactions__list {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.reactions__button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: transform 0.2s ease;
+}
+
+.reactions__button:hover {
+    transform: scale(1.2);
+}
+
+.reactions__button svg {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+/* Блок Читать также */
+
+.other{
+     background-color: rgba(116, 182, 255, 0.15);
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     justify-content: center;
+     width: 100%;
+}
+
+.other h2{
+     text-align: center;
+     font-size: 32px;
+     font-weight: 500;
+     margin: 64px 206px;
+}
+
+.group{
+     width: 1024px;
+     display: flex;
+     gap: 20px;
+     margin-bottom: 104px;
+}
+
+.group a{
+     text-decoration: none;
+     color: #000;
+}
+
+.group__item{
+     background-color: #fff;
+     border-radius: 16px;
+     height: 276px;
+     transition: box-shadow 0.3s ease;
+}
+
+.group__item:hover {
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.group__img{
+     border-radius: 16px 16px 0 0;
+}
+
+.group__text{
+     margin: 5px 16px 16px 16px;
+     font-size: 18px;
+     font-weight: 500;
+     width: 250px;
+}
+
+/* Форма подписки на рассылку */
+
+.subscribe{
+     margin: 64px 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 56px;
+     width: 100%; /* Добавлено для полной ширины контейнера */
+     box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+.subscribe p{
+     font-size: 16px;
+     font-weight: 300;
+     max-width: 291px;
+     margin: 0; /* Убираем стандартные отступы параграфа */
+}
+
+.subscribe span{
+     font-weight: 600;
+}
+
+.subscribe form{
+     display: flex;
+     gap: 8px;
+     justify-content: center;
+     align-items: center;
+}
+
+.subscribe button{
+     border: none;
+     padding: 8px 16px;
+     background-color: #1874FF;
+     border-radius: 8px;
+     font-size: 16px;
+     font-weight: 400;
+     color: #fff;
+     cursor: pointer;
+}
+
+.subscribe input{
+     padding: 7px 16px;
+     border: none;
+     border-radius: 8px;
+     font-size: 18px;
+     font-weight: 300;
+}
+
+.subscribe input::placeholder{
+     color: #B4B5B8;
+}
+
+/* Шапка сайта */
+.header {
+    position: fixed; /* Фиксируем шапку */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Белый фон */
+    z-index: 1000; /* Шапка поверх контента */
+    border-bottom: 1px solid #e0e0e0; /* Тонкая граница снизу */
+}
+
+.header__container {
+    max-width: 1440px; /* Максимальная ширина по макету */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 190px; /* Отступы */
+}
+
+.header__logo img {
+    height: 40px; /* Высота логотипа */
+    width: auto;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Расстояние между меню и кнопкой */
+}
+
+.header__menu {
+    list-style: none;
+    display: flex;
+    gap: 32px; /* Расстояние между пунктами меню */
+}
+
+.header__menu li a {
+    text-decoration: none;
+    color: #17191C;
+    font-size: 16px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.header__menu li a:hover {
+    color: #1874FF;
+}
+
+.header__button {
+    background-color: #1874FF; 
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.header__button:hover {
+    background-color: #519DFF; 
+}
+
+.header__toggle {
+    display: none; /* Скрываем бургер на десктопе */
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+}
+
+.header__toggle-line {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+/* Основной контейнер футера */
+.footer {
+    background-color: #1C2526;
+    color: #fff;
+}
+
+.footer__container {
+    max-width: 1025px;
+    padding-top: 64px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Общие стили для колонок */
+.footer__column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+/* Колонка 1: Логотип и навигация */
+.footer__logo img {
+    height: 40px;
+}
+
+.footer__nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 200px;
+}
+
+.footer__nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.footer__nav a:hover {
+    text-decoration: underline;
+}
+
+/* Колонка 2: Телефон и соцсети */
+.footer__phone {
+     color: #fff;
+     text-decoration: none;
+     font-size: 18px;
+     font-weight: 500;
+}
+
+.footer__socials {
+     display: flex;
+     gap: 17px;
+     margin-top: 10px;
+}
+
+.footer__socials img {
+     height: 30px;
+}
+
+.footer__email {
+     color: #fff;
+     text-decoration: none;
+     font-size: 18px;
+     font-weight: 500;
+     font-family: "Rubik", sans-serif;
+}
+
+.footer__address {
+    margin-top: 35px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/* Колонка 3: Юридическая информация */
+.footer__legal{
+     width: 240px;
+     margin-left: 100px;
+}
+
+.footer__legal img{
+    height: 30px;
+}
+
+.footer__column--legal p,
+.footer__column--legal a {
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer__column--legal a {
+    display: block;
+}
+
+/* Нижняя секция */
+.footer__bottom {
+    max-width: 1025px;
+    margin: 88px auto 0;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #fff;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* Мобильная адаптация */
+
+@media (max-width: 1024px) {
+     .group {
+         width: 100%; /* Контейнер занимает всю доступную ширину */
+         padding: 0 20px; /* Отступы по краям для аккуратности */
+         box-sizing: border-box; /* Учитываем padding в ширине */
+     }
+ 
+     .other h2 {
+         margin: 48px 20px; /* Уменьшаем боковые отступы */
+     }
+ 
+     .group__item {
+         flex: 1; /* Карточки равномерно распределяются */
+     }
+
+     .subscribe {
+        gap: 40px; /* Уменьшаем расстояние между текстом и формой */
+        padding: 0 20px; /* Добавляем отступы по краям */
+     }
+
+     .subscribe p {
+        max-width: 250px; /* Уменьшаем максимальную ширину текста */
+     }
+
+     .header__container {
+          padding: 15px;
+     }
+  
+     .header__menu {
+          gap: 20px; /* Уменьшаем расстояние между пунктами */
+     }
+  
+     .header__nav {
+          gap: 20px;
+     }
+}
+
+/* Планшеты (ширина до 768px) */
+@media (max-width: 768px) {
+    .contant_container {
+        padding: 0 1rem;
+    }
+
+    .article__title {
+        font-size: 2rem;
+        padding: 4rem 1.5rem;
+    }
+
+    .article__subtitle {
+        font-size: 1.25rem;
+    }
+
+    .article__text {
+        font-size: 0.9375rem;
+    }
+
+    .contents__link {
+        font-size: 1rem;
+    }
+
+    .intro,
+    .contents,
+    .section div {
+        margin-bottom: 4rem;
+    }
+
+    .article__img {
+          width: 460px;
+          max-width: none;
+          margin: 0 auto;
+     }
+
+     .reactions__list {
+        gap: 1rem;
+     }
+
+     .reactions__button svg {
+        width: 2rem;
+        height: 2rem;
+     }
+
+     .other h2 {
+        font-size: 28px; /* Уменьшаем заголовок */
+        margin: 40px 20px;
+     }
+
+     .group {
+        flex-direction: column; /* Карточки в столбец */
+        gap: 16px; /* Уменьшаем расстояние между карточками */
+        margin-bottom: 60px; /* Уменьшаем нижний отступ */
+     }
+
+     .group__item {
+        height: 260px; /* Высота зависит от контента */
+        max-width: 309px; /* Ограничиваем ширину карточек */
+        margin: 0 auto; /* Центрируем карточки */
+     }
+
+     .group__img {
+        height: 180px; /* Уменьшаем высоту изображения */
+     }
+
+     .group__text {
+        font-size: 16px; /* Уменьшаем размер текста */
+     }
+
+     .subscribe {
+          flex-direction: column; /* Переводим элементы в столбец */
+          gap: 24px; /* Уменьшаем расстояние между текстом и формой */
+          margin: 48px 0; /* Уменьшаем внешние отступы */
+          padding: 0 15px;
+     }
+  
+     .subscribe p {
+          font-size: 14px; /* Уменьшаем размер текста */
+          max-width: 100%; /* Текст занимает всю ширину */
+          text-align: center; /* Центрируем текст */
+     }
+  
+     .subscribe input {
+          font-size: 16px; /* Уменьшаем шрифт ввода */
+          padding: 6px 12px; /* Уменьшаем внутренние отступы */
+     }
+  
+     .subscribe button {
+          font-size: 14px; /* Уменьшаем шрифт кнопки */
+          padding: 6px 12px;
+     }
+
+     .header__toggle {
+          display: flex; /* Показываем бургер */
+     }
+  
+     .header__menu {
+          display: none; /* Скрываем меню */
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background-color: #fff;
+          flex-direction: column;
+          gap: 10px;
+          padding: 20px;
+          border-bottom: 1px solid #e0e0e0;
+     }
+  
+     .header__nav.active .header__menu {
+          display: flex; /* Показываем меню при активации */
+     }
+  
+     .header__menu li a {
+          font-size: 18px;
+          padding: 10px 0;
+          display: block;
+     }
+  
+     .header__button {
+          display: none; /* Скрываем кнопку на мобильной версии */
+     }
+  
+     /* Анимация бургера */
+     .header__nav.active .header__toggle-line:nth-child(1) {
+          transform: rotate(45deg) translate(5px, 5px);
+     }
+  
+     .header__nav.active .header__toggle-line:nth-child(2) {
+          opacity: 0;
+     }
+  
+     .header__nav.active .header__toggle-line:nth-child(3) {
+          transform: rotate(-45deg) translate(6px, -6px);
+     }
+  
+     .main-content {
+          padding-top: 50px; /* Уменьшаем отступ */
+     }
+
+     .footer__container {
+          max-width: 700px;
+          grid-template-columns: 1fr 1fr; /* Переходим на 2 колонки */
+          gap: 20px; /* Добавляем промежутки между колонками */
+          padding-top: 48px;
+     }
+  
+     /* Первая колонка (логотип и навигация) */
+     .footer__nav ul {
+          width: auto;
+          gap: 20px;
+          width: 230px;
+     }
+  
+     .footer__nav a {
+          font-size: 18px;
+          font-weight: 500;
+     }
+  
+     /* Вторая колонка (контакты) */
+     .footer__phone, .footer__email {
+          font-size: 16px;
+     }
+  
+     .footer__address {
+          font-size: 14px;
+          margin-top: 20px;
+     }
+  
+     .footer__socials img {
+          height: 25px; /* Уменьшаем иконки */
+     }
+  
+     /* Третья колонка (юридическая информация) */
+     .footer__legal {
+          margin-left: 0; /* Убираем отступ */
+          width: auto;
+          grid-column-start: 2;
+     }
+  
+     .footer__legal img {
+          height: 25px;
+     }
+  
+     .footer__column--legal p,
+     .footer__column--legal a {
+          font-size: 12px;
+     }
+  
+     /* Нижняя секция */
+     .footer__bottom {
+          max-width: 700px;
+          margin-top: 32px;
+          gap: 10px;
+          text-align: center;
+          padding: 16px 0;
+     }
+}
+
+/* Телефоны (ширина до 480px) */
+@media (max-width: 480px) {
+    .contant_container {
+        padding: 0 0.75rem;
+    }
+
+    .article__title {
+        font-size: 1.75rem;
+        padding: 2rem 1rem;
+    }
+
+    .article__subtitle {
+        font-size: 1.125rem;
+        margin-bottom: 1rem;
+    }
+
+    .article__text {
+        font-size: 0.875rem; /* 14px */
+    }
+
+    .contents__list {
+        margin-left: 1rem;
+    }
+
+    .contents__link {
+        font-size: 0.875rem;
+    }
+
+    .intro,
+    .contents,
+    .section div {
+        margin-bottom: 2rem;
+    }
+
+    .article__img {
+          width: 320px;
+          max-width: none;
+          margin: 0 auto;
+     }
+
+     .reactions__list {
+          gap: 0.75rem;
+     }
+  
+     .reactions__button svg {
+          width: 1.75rem;
+          height: 1.75rem;
+     }
+
+     .other h2 {
+        font-size: 24px;
+        margin: 32px 15px;
+     }
+
+     .group {
+          padding: 0 15px;
+          gap: 12px;
+          margin-bottom: 40px;
+     }
+
+     .group__item {
+          max-width: 257px;
+          height: 225px;
+     }
+
+     .group__img {
+          height: 150px;
+     }
+
+     .group__text {
+          font-size: 14px;
+          margin: 8px 12px 12px 12px;
+     }
+
+     .subscribe {
+          gap: 20px;
+          margin: 32px 0;
+          padding: 0 10px;
+     }
+  
+     .subscribe p {
+          font-size: 13px;
+     }
+  
+     .subscribe form {
+          flex-direction: column; /* Форма тоже в столбец */
+          gap: 10px;
+          width: 100%; /* Форма занимает всю ширину */
+     }
+  
+     .subscribe input {
+          width: 100%; /* Поле ввода на всю ширину */
+          font-size: 14px;
+          padding: 5px 10px;
+     }
+  
+     .subscribe button {
+          width: 60%; /* Кнопка на всю ширину */
+          font-size: 14px;
+          padding: 8px 10px; /* Увеличиваем padding для удобства нажатия */
+     }
+
+     .header__container {
+          padding: 10px 15px;
+     }
+  
+     .header__logo img {
+          height: 25px; /* Уменьшаем логотип */
+     }
+  
+     .header__menu {
+          padding: 15px;
+     }
+  
+     .main-content {
+          padding-top: 45px;
+     }
+}
+
+/* Очень узкие устройства (ширина до 340px) */
+@media (max-width: 340px) {
+    .contant_container {
+        padding: 0 0.5rem;
+    }
+
+    .article__title {
+        font-size: 1.5rem;
+        padding: 1.5rem 0.5rem;
+    }
+
+    .article__subtitle {
+        font-size: 1rem;
+    }
+
+    .article__text {
+        font-size: 0.8125rem; /* 13px */
+    }
+
+    .contents__list {
+        margin-left: 0.75rem;
+    }
+
+    .contents__link {
+        font-size: 0.8125rem;
+    }
+
+    .intro,
+    .contents,
+    .section div {
+        margin-bottom: 1.5rem;
+    }
+
+    .article__img {
+          width: 200px;
+          max-width: none;
+          margin: 0 auto;
+     }
+
+     .reactions__list {
+          gap: 0.5rem;
+     }
+  
+     .reactions__button svg {
+          width: 1.5rem;
+          height: 1.5rem;
+     }
+
+     .other h2 {
+        font-size: 20px;
+        margin: 24px 10px;
+     }
+
+     .group {
+          padding: 0 10px;
+          gap: 10px;
+          margin-bottom: 30px;
+     }
+
+     .group__item {
+          max-width: 207px;
+          height: 185px;
+     }
+
+     .group__img {
+          height: 120px;
+     }
+
+     .group__text {
+          font-size: 13px;
+          margin: 6px 10px 10px 10px;
+          width: 100%;
+     }
+
+     .subscribe {
+          gap: 16px;
+          margin: 24px 0;
+          padding: 0 8px;
+     }
+  
+     .subscribe p {
+          font-size: 12px;
+          max-width: 200px;
+     }
+  
+     .subscribe input {
+          font-size: 13px;
+          padding: 4px 8px;
+     }
+  
+     .subscribe button {
+          font-size: 13px;
+          padding: 6px 8px;
+     }
+
+     .footer__container {
+          max-width: 95%; /* Используем почти всю ширину экрана */
+          grid-template-columns: 1fr; /* Одна колонка */
+          gap: 32px; /* Уменьшаем промежутки */
+          padding-top: 24px; /* Уменьшаем верхний отступ */
+          margin: 0 16px;
+      }
+
+      .footer__logo{
+          margin-bottom: 4px;
+      }
+  
+      /* Первая колонка (логотип и навигация) */
+      .footer__logo img {
+          height: 30px; /* Уменьшаем логотип */
+      }
+  
+      .footer__nav ul {
+          width: 230px; 
+          gap: 18px; /* Уменьшаем промежутки */
+      }
+  
+      .footer__nav a {
+          font-size: 18px; /* Уменьшаем шрифт */
+          font-weight: 500; /* Уменьшаем жирность */
+      }
+  
+      /* Вторая колонка (контакты) */
+      .footer__socials {
+          gap: 10px; /* Уменьшаем промежутки между иконками */
+      }
+  
+      .footer__socials img {
+          height: 24px; /* Уменьшаем иконки */
+      }
+  
+      .footer__phone, .footer__email {
+          font-size: 18px; /* Уменьшаем шрифт */
+      }
+  
+      .footer__address {
+          font-size: 16px; /* Уменьшаем шрифт */
+          font-weight: 300;
+      }
+  
+      /* Третья колонка (юридическая информация) */
+      .footer__legal {
+          margin-left: 0; /* Убираем отступ */
+          width: auto;
+          grid-column-start: auto; /* Сбрасываем позицию */
+      }
+  
+      .footer__legal img {
+          height: 30px; /* Уменьшаем иконку */
+      }
+  
+      .footer__column--legal p,
+      .footer__column--legal a {
+          font-size: 12px; /* Уменьшаем шрифт */
+          font-weight: 400;
+          width: 201px;
+      }
+  
+      /* Нижняя секция */
+      .footer__bottom {
+          margin-top: 20px; /* Уменьшаем отступ */
+          padding: 10px 0; /* Уменьшаем внутренние отступы */
+          flex-direction: column; /* Текст в столбик */
+          gap: 8px; /* Уменьшаем промежутки */
+          font-size: 16px; /* Уменьшаем шрифт */
+          font-weight: 400;
+          text-align: center; /* Центрируем текст */
+      }
+}
